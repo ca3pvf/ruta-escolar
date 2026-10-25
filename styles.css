@@ -68,3 +68,47 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .arrival-card{align-items:flex-start}.arrival-contact{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid #e3eaf4}.arrival-contact:first-of-type{margin-top:8px}.arrival-contact.sent b{color:#13743b}.arrival-contact .primary{padding:11px 14px;min-width:96px;flex-shrink:0}.arrival-contact .grow small{font-size:11px}
 
 .arrival-contact b{display:block;font-size:13px}.msg-edit{margin-top:14px;background:#f8fbff;border:1px solid #dce7f5;border-radius:12px;padding:10px 12px}.msg-edit summary{cursor:pointer;font-weight:700;color:#1759a0;font-size:13px}
+
+/* Horario por día (grilla: día · ingreso · salida) */
+.wk{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:10px 8px;align-items:center;background:#fff;border:1px solid #dce7f5;border-radius:14px;padding:14px;margin:10px 0}
+.wk .head{font-size:11px;font-weight:800;letter-spacing:.8px;color:#536780;text-transform:uppercase}
+.wk .dn{display:flex;align-items:center;gap:9px;margin:0;font-size:14px;font-weight:800;color:#183451}
+.wk .dn input{width:24px;height:24px;margin:0;flex-shrink:0;accent-color:#1260bb}
+.wk select{min-height:46px;margin:0}
+.secondary.sm{padding:11px 15px}
+
+/* Nóminas de ruta (V2.6) */
+.datebar{display:flex;align-items:center;gap:8px;margin:2px 0 12px}
+.datebar .lbl{flex:1;text-align:center;font-weight:800;font-size:16px;color:#142d4c;min-width:0}
+.datebar button{min-width:48px;min-height:46px;border-radius:11px;border:1px solid #d7e6f8;background:#e8f1fc;color:#1759a0;font-size:20px;font-weight:700}
+.datebar .today{font-size:13px;padding:0 12px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#e8eef6;padding:4px;border-radius:13px;margin-bottom:12px}
+.seg button{border:0;border-radius:10px;min-height:48px;background:transparent;color:#4a5d75;font-weight:800;font-size:15px}
+.seg button[aria-pressed="true"]{background:#fff;color:#1359a8;box-shadow:0 2px 8px #153a6518}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:6px}
+.chip{flex:0 0 auto;min-height:48px;padding:6px 15px;border-radius:999px;border:1.5px solid #d7e6f8;background:#fff;color:#1759a0;font-weight:800;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;font-size:15px}
+.chip small{font-weight:600;color:#6b7e96;font-size:11px}
+.chip[aria-pressed="true"]{background:#1359a8;color:#fff;border-color:#1359a8}
+.chip[aria-pressed="true"] small{color:#cfe2f8}
+.route-summary{font-size:14px;font-weight:700;display:flex;flex-direction:column;gap:8px}
+.route-summary .sumtxt{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.bar{height:10px;border-radius:5px;background:#cfe0f5;overflow:hidden}
+.bar i{display:block;height:100%;background:#159653;transition:width .25s}
+.toolrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.toolrow button,.moves button{min-height:40px;padding:8px 12px;font-size:14px}
+.route-card{flex-direction:column;align-items:stretch;gap:8px;padding:12px}
+.rc-main{display:flex;align-items:center;gap:11px;min-height:56px;cursor:pointer;margin:0}
+.route-card .route-index{padding:8px 10px;font-size:14px;min-width:36px;text-align:center}
+.route-card .grow strong{font-size:16px}
+.route-card .grow small{font-size:13px;line-height:1.5}
+.rc-main input[type=checkbox]{width:32px;height:32px;min-height:0;flex-shrink:0;accent-color:#159653;padding:0}
+.moves{display:flex;gap:8px}.moves button{flex:1}
+.contacts{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;border-top:1px dashed #d9e3ef;padding-top:8px;color:#3b4d66}
+.contacts .g{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+.contacts a{color:#1359a8;font-weight:700}
+.arrbtn{width:100%;display:flex;align-items:center;justify-content:flex-start;text-align:left;gap:10px;margin-top:8px;min-height:48px}
+.arrbtn.set{background:#159653;color:#fff}
+.arrbtn:disabled{opacity:.5}
+.box{width:24px;height:24px;border-radius:7px;border:2.5px solid currentColor;display:grid;place-items:center;font-size:15px;flex-shrink:0}
+.arrbtn.set .box::after{content:"✓"}
+#amExtras{margin-top:6px}

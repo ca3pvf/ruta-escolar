@@ -95,3 +95,25 @@ Los datos viven en el teléfono donde se instaló. Usar *Configuración → Expo
 - El texto del mensaje se puede editar (desplegable al final de la lista; `[ALUMNO]` se reemplaza por el nombre).
 - Los avisos quedan en el registro y aparecen en el PDF mensual.
 - La pestaña *Mensajes* permite elegir a qué apoderado enviar.
+
+
+## Cambios V2.4
+- **Horario por día en la ficha del alumno.** Una sola grilla con un check por día (si viaja), y el **ingreso** y la **salida** de cada día. Reemplaza a "Ingreso", "Salida habitual", "Horarios especiales por día" y "Días de transporte".
+- Botón **Copiar lunes a todos los días**: copia a martes–viernes el check, el ingreso y la salida del lunes (se guarda al pulsar *Guardar alumno*).
+- Las nóminas usan el ingreso y la salida de cada día. Las fichas antiguas se leen igual: si no tienen horario propio un día, usan su ingreso y salida habituales.
+
+## Cambios V2.5
+- **Lista de alumnos en CSV** (*Más → Lista de alumnos (CSV)*):
+  - **Descargar lista**: genera `alumnos-AAAA-MM-DD.csv` con todos los alumnos, abrible en Excel o Google Sheets (separador `;`, acentos correctos).
+  - **Descargar plantilla vacía**: archivo con las columnas y una fila de ejemplo (la fila que empieza con "EJEMPLO" se ignora al cargar).
+  - **Cargar lista desde CSV**: antes de importar muestra cuántos alumnos son nuevos, cuántos se actualizan y los avisos. Los alumnos se identifican por *nombre + curso*: si ya existe se actualiza, si no se agrega. **Nunca se borra a nadie** por no estar en el archivo.
+- Columnas: `nombre; curso; direccion; apoderado1..4, telefono1..4, parentesco1..4; lun/mar/mie/jue/vie_viaja (si/no), _ingreso, _salida`. Solo `nombre` es obligatoria. Si faltan las columnas de días, el alumno viaja de lunes a viernes con el primer ingreso y salida de la lista.
+- La carga acepta separador `;`, `,` o tabulación, y archivos guardados por Excel en Windows (acentos incluidos). Cursos como "3ro básico" o "3 basico" se reconocen. Si un horario del archivo no está en la lista de horarios, se agrega a esa lista.
+
+## Cambios V2.6
+- **Nóminas de ruta con el diseño nuevo:** barra de fecha (‹ día › Hoy), pestañas **Mañana / Tarde**, chips de horario con la cantidad de alumnos, resumen con barra de avance ("X de N retirados · Y en el colegio") y tarjetas con número, curso, dirección, entrada, sector, apoderados con enlace de llamada y casilla de retiro. Fin de semana muestra aviso de que no hay recorridos.
+- **Tarde:** solo aparecen los alumnos que **sí fueron retirados desde su casa en la mañana** de ese día, agrupados por su horario de salida. Si se desmarca el retiro de la mañana, el alumno sale de la lista de la tarde.
+- **Mañana:** botón **Ordenar ruta** (Subir/Bajar), **Sugerir orden** (del domicilio más lejano al colegio, siguiendo el más cercano; requiere coordenadas del alumno y del colegio) y **Reiniciar marcas del día**. **Llegada al colegio** se marca una vez por bloque horario. El botón *Mensaje llegada al colegio* sigue igual.
+- Las marcas se guardan por alumno y fecha, así que no cambian al pasar de "Todos" a un horario específico.
+- **Ficha del alumno:** nuevos campos **Sector** y **Coordenadas (lat, lng)**. **Más → Ubicación del colegio** guarda el punto de referencia para "Sugerir orden".
+- **CSV:** nuevas columnas `sector` y `coordenadas`. Un CSV antiguo sin esas columnas no borra el sector ni las coordenadas ya guardados.

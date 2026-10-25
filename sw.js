@@ -1,4 +1,4 @@
-const CACHE='ruta-escolar-2.2';
+const CACHE='ruta-escolar-2.6';
 // Archivos imprescindibles: si falta alguno, la instalación falla (y la app no podría abrir sin internet).
 const CORE=['./','./index.html','./styles.css','./licencia.js','./app.js'];
 // Secundarios (íconos, manifiesto): si alguno falta, se omite y la app igual funciona sin internet.

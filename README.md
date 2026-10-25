@@ -83,3 +83,15 @@ Los datos viven en el teléfono donde se instaló. Usar *Configuración → Expo
 - **Botón de actualización** (*Más → Versión y actualizaciones*): "Buscar actualizaciones" y, si hay una nueva, "Actualizar ahora". No se actualiza sola a mitad de una ruta. Los alumnos y registros no se tocan.
 - **Autorización por teléfono.** Cada teléfono muestra un código de dispositivo; solo el propietario puede generar el código de activación que lo desbloquea (ver `HERRAMIENTAS-PROPIETARIO`). Un código no sirve en otro teléfono.
 - Numeración de versiones: V1.9 corresponde al paquete anterior (antes llamado v10); este es V2.0.
+
+## Cambios V2.1
+- **Corrección sin internet:** antes, si faltaba un solo archivo en la publicación (por ejemplo un ícono), el teléfono no guardaba la app y no abría en modo avión. Ahora solo los archivos imprescindibles (`index.html`, `styles.css`, `app.js`, `licencia.js`) bloquean la instalación; los íconos y el manifiesto son secundarios.
+- **Diagnóstico** en *Más → Versión y actualizaciones → Diagnóstico: ¿funciona sin internet?* (también en la pantalla de bloqueo): indica si el service worker está activo y qué archivos se guardaron.
+- Si falta `licencia.js`, la app queda bloqueada con un aviso claro, en lugar de funcionar sin protección.
+
+## Cambios V2.2
+- **Hasta 4 apoderados por alumno** (nombre, teléfono y parentesco opcional). El primero es obligatorio; la ficha nueva muestra dos por defecto. Cada apoderado tiene su propio "Elegir del teléfono" / "Importar .vcf" y su propio botón de llamada. Los alumnos antiguos con un solo apoderado se convierten solos.
+- **Mensaje de llegada al colegio:** al pulsar el botón se abre una lista con los alumnos retirados en casa y, bajo cada uno, sus apoderados con un botón **Enviar**. Cada botón abre WhatsApp con el mensaje listo; el envío final se confirma en WhatsApp. La fila queda marcada con la hora ("WhatsApp abierto a las 08:00") y el botón pasa a "Abrir de nuevo". La lista se mantiene al volver desde WhatsApp.
+- El texto del mensaje se puede editar (desplegable al final de la lista; `[ALUMNO]` se reemplaza por el nombre).
+- Los avisos quedan en el registro y aparecen en el PDF mensual.
+- La pestaña *Mensajes* permite elegir a qué apoderado enviar.

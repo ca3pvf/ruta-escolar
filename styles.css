@@ -61,3 +61,10 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 
 /* Autorización del teléfono */
 .lock{position:fixed;inset:0;z-index:100;background:#f8faff;overflow:auto;display:flex;align-items:center;justify-content:center;padding:20px}.lock.hidden{display:none!important}.lock-box{max-width:420px;width:100%}.lock-box .brandmark{font-size:40px}.deviceid{font:700 22px/1.2 ui-monospace,Menlo,Consolas,monospace;letter-spacing:2px;text-align:center;background:#e9f3ff;color:#144a86;border-radius:12px;padding:16px;user-select:all;-webkit-user-select:all;word-break:break-all}
+
+/* Apoderados múltiples y lista de mensajes de llegada */
+.contact-block{border:1px solid #dce7f5;background:#f8fbff;border-radius:12px;padding:4px 12px 12px;margin:10px 0}.contact-head{display:flex;justify-content:space-between;align-items:center;margin-top:10px}.contact-block .contact-tools{margin-top:6px}
+.card-actions{flex-wrap:wrap;justify-content:flex-end;max-width:132px}
+.arrival-card{align-items:flex-start}.arrival-contact{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid #e3eaf4}.arrival-contact:first-of-type{margin-top:8px}.arrival-contact.sent b{color:#13743b}.arrival-contact .primary{padding:11px 14px;min-width:96px;flex-shrink:0}.arrival-contact .grow small{font-size:11px}
+
+.arrival-contact b{display:block;font-size:13px}.msg-edit{margin-top:14px;background:#f8fbff;border:1px solid #dce7f5;border-radius:12px;padding:10px 12px}.msg-edit summary{cursor:pointer;font-weight:700;color:#1759a0;font-size:13px}
